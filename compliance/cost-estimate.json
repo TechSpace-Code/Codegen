@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-07-23T22:42:44.514Z",
+  "estimates": [
+    {
+      "resourceId": "azurerm_linux_web_app",
+      "currency": "USD",
+      "monthlyLow": 60,
+      "monthlyHigh": 112,
+      "methodology": "Indicative catalog heuristic; validate with Azure Pricing Calculator or an authenticated pricing adapter.",
+      "requiresApproval": false
+    },
+    {
+      "resourceId": "azurerm_kubernetes_cluster",
+      "currency": "USD",
+      "monthlyLow": 165,
+      "monthlyHigh": 308,
+      "methodology": "Indicative catalog heuristic; validate with Azure Pricing Calculator or an authenticated pricing adapter.",
+      "requiresApproval": false
+    },
+    {
+      "resourceId": "azurerm_application_gateway",
+      "currency": "USD",
+      "monthlyLow": 38,
+      "monthlyHigh": 70,
+      "methodology": "Indicative catalog heuristic; validate with Azure Pricing Calculator or an authenticated pricing adapter.",
+      "requiresApproval": false
+    },
+    {
+      "resourceId": "azurerm_firewall",
+      "currency": "USD",
+      "monthlyLow": 38,
+      "monthlyHigh": 70,
+      "methodology": "Indicative catalog heuristic; validate with Azure Pricing Calculator or an authenticated pricing adapter.",
+      "requiresApproval": false
+    },
+    {
+      "resourceId": "azurerm_lb",
+      "currency": "USD",
+      "monthlyLow": 38,
+      "monthlyHigh": 70,
+      "methodology": "Indicative catalog heuristic; validate with Azure Pricing Calculator or an authenticated pricing adapter.",
+      "requiresApproval": false
+    },
+    {
+      "resourceId": "azurerm_virtual_network_gateway",
+      "currency": "USD",
+      "monthlyLow": 38,
+      "monthlyHigh": 70,
+      "methodology": "Indicative catalog heuristic; validate with Azure Pricing Calculator or an authenticated pricing adapter.",
+      "requiresApproval": false
+    }
+  ]
+}
