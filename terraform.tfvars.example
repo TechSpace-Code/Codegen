@@ -1,0 +1,111 @@
+subscription_id = "57281d6d-7da8-435e-b25d-87a16b2e7a32"
+
+# Stack r0: App Service
+# — stack r0 (governance tags)
+r0_application          = "sample-app"
+r0_environment          = "prod"
+r0_owner                = "platform-team@contoso.com"
+r0_cost_center          = "CC-0000"
+r0_business_unit        = "engineering"
+r0_data_classification  = "confidential"
+r0_criticality          = "medium"
+r0_resource_group_name  = "rg-workload"
+r0_app_name             = "app-workload-dev"
+r0_service_plan_sku     = "B1"
+r0_runtime_stack        = "NODE|20-lts"
+r0_https_only                      = true
+r0_enable_system_assigned_identity = true
+r0_vnet_route_all_enabled          = false
+# --- Private Endpoint (subresource: sites) ---
+# DNS zone: privatelink.azurewebsites.net
+r0_pe_enabled     = true
+r0_pe_subnet_id   = ""
+r0_pe_dns_zone_id = ""
+r0_compliance_framework    = "not_assessed"
+r0_network_segmentation    = "private_only"
+
+# Stack r1: Azure Kubernetes Service (AKS)
+# — stack r1 (governance tags)
+r1_application          = "sample-app"
+r1_environment          = "dev"
+r1_owner                = "platform-team@contoso.com"
+r1_cost_center          = "CC-0000"
+r1_business_unit        = "engineering"
+r1_data_classification  = "internal"
+r1_criticality          = "medium"
+r1_resource_group_name = "rg-workload"
+r1_aks_cluster_name    = "aks-workload-dev"
+r1_aks_dns_prefix      = "aksdev"
+r1_aks_node_count      = 2
+r1_aks_vm_size         = "Standard_DS2_v2"
+r1_compliance_framework    = "not_assessed"
+r1_network_segmentation    = "internal"
+
+# Stack r2: Azure Application Gateway
+# — stack r2 (governance tags)
+r2_application          = "sample-app"
+r2_environment          = "dev"
+r2_owner                = "platform-team@contoso.com"
+r2_cost_center          = "CC-0000"
+r2_business_unit        = "engineering"
+r2_data_classification  = "internal"
+r2_criticality          = "medium"
+r2_resource_group_name = "rg-workload"
+r2_agw_name            = "appgw-workload"
+r2_agw_subnet_id       = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet/subnets/appgw"
+r2_agw_sku_name        = "Standard_v2"
+r2_agw_sku_tier        = "Standard_v2"
+r2_agw_capacity        = 2
+r2_compliance_framework    = "not_assessed"
+r2_network_segmentation    = "internal"
+
+# Stack r3: Azure Firewall
+# — stack r3 (governance tags)
+r3_application          = "sample-app"
+r3_environment          = "dev"
+r3_owner                = "platform-team@contoso.com"
+r3_cost_center          = "CC-0000"
+r3_business_unit        = "engineering"
+r3_data_classification  = "internal"
+r3_criticality          = "medium"
+r3_resource_group_name = "rg-workload"
+r3_fw_name             = "azfw-workload"
+r3_fw_subnet_id        = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet/subnets/AzureFirewallSubnet"
+r3_fw_sku_name         = "AZFW_VNet"
+r3_fw_sku_tier         = "Standard"
+r3_fw_zone_ids         = []
+r3_compliance_framework    = "not_assessed"
+r3_network_segmentation    = "internal"
+
+# Stack r4: Azure Load Balancer
+# — stack r4 (governance tags)
+r4_application          = "sample-app"
+r4_environment          = "dev"
+r4_owner                = "platform-team@contoso.com"
+r4_cost_center          = "CC-0000"
+r4_business_unit        = "engineering"
+r4_data_classification  = "internal"
+r4_criticality          = "medium"
+r4_resource_group_name = "rg-workload"
+r4_lb_name             = "lb-workload"
+r4_lb_sku              = "Standard"
+r4_compliance_framework    = "not_assessed"
+r4_network_segmentation    = "internal"
+
+# Stack r5: Azure VPN Gateway
+# — stack r5 (governance tags)
+r5_application          = "sample-app"
+r5_environment          = "dev"
+r5_owner                = "platform-team@contoso.com"
+r5_cost_center          = "CC-0000"
+r5_business_unit        = "engineering"
+r5_data_classification  = "internal"
+r5_criticality          = "medium"
+r5_resource_group_name = "rg-workload"
+r5_vpn_gw_name         = "vgw-workload"
+r5_vpn_gw_subnet_id      = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet/subnets/GatewaySubnet"
+r5_vpn_gw_vpn_type       = "RouteBased"
+r5_vpn_gw_sku            = "VpnGw1"
+r5_vpn_gw_generation     = "Generation1"
+r5_compliance_framework    = "not_assessed"
+r5_network_segmentation    = "internal"
