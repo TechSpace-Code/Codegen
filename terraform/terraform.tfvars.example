@@ -1,0 +1,164 @@
+subscription_id = "57281d6d-7da8-435e-b25d-87a16b2e7a32"
+
+# Stack r0: Azure Virtual Network
+# — stack r0 (governance tags)
+r0_application          = "sample-app"
+r0_environment          = "dev"
+r0_owner                = "platform-team@contoso.com"
+r0_cost_center          = "CC-0000"
+r0_business_unit        = "engineering"
+r0_data_classification  = "internal"
+r0_criticality          = "medium"
+r0_resource_group_name  = "rg-network-spoke"
+r0_location             = "eastus"
+r0_vnet_name            = "vnet-spoke-01"
+r0_address_space        = ["10.70.0.0/16"]
+r0_subnets = [
+  {
+    r0_name   = "snet-01"
+    r0_prefix = "10.70.1.0/24"
+  }
+  {
+    r0_name   = "snet-02"
+    r0_prefix = "10.70.2.0/24"
+  }
+  {
+    r0_name   = "snet-03"
+    r0_prefix = "10.70.3.0/24"
+  }
+  {
+    r0_name   = "snet-04"
+    r0_prefix = "10.70.4.0/24"
+  }
+]
+r0_compliance_framework    = "not_assessed"
+r0_network_segmentation    = "internal"
+
+# Stack r1: Azure VPN Gateway
+# — stack r1 (governance tags)
+r1_application          = "sample-app"
+r1_environment          = "dev"
+r1_owner                = "platform-team@contoso.com"
+r1_cost_center          = "CC-0000"
+r1_business_unit        = "engineering"
+r1_data_classification  = "internal"
+r1_criticality          = "medium"
+r1_resource_group_name = "rg-workload"
+r1_vpn_gw_name         = "vgw-workload"
+r1_vpn_gw_subnet_id      = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet/subnets/GatewaySubnet"
+r1_vpn_gw_vpn_type       = "RouteBased"
+r1_vpn_gw_sku            = "VpnGw1"
+r1_vpn_gw_generation     = "Generation1"
+r1_compliance_framework    = "not_assessed"
+r1_network_segmentation    = "internal"
+
+# Stack r2: Azure Load Balancer
+# — stack r2 (governance tags)
+r2_application          = "sample-app"
+r2_environment          = "dev"
+r2_owner                = "platform-team@contoso.com"
+r2_cost_center          = "CC-0000"
+r2_business_unit        = "engineering"
+r2_data_classification  = "internal"
+r2_criticality          = "medium"
+r2_resource_group_name = "rg-workload"
+r2_lb_name             = "lb-workload"
+r2_lb_sku              = "Standard"
+r2_compliance_framework    = "not_assessed"
+r2_network_segmentation    = "internal"
+
+# Stack r3: Azure Firewall
+# — stack r3 (governance tags)
+r3_application          = "sample-app"
+r3_environment          = "dev"
+r3_owner                = "platform-team@contoso.com"
+r3_cost_center          = "CC-0000"
+r3_business_unit        = "engineering"
+r3_data_classification  = "internal"
+r3_criticality          = "medium"
+r3_resource_group_name = "rg-workload"
+r3_fw_name             = "azfw-workload"
+r3_fw_subnet_id        = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet/subnets/AzureFirewallSubnet"
+r3_fw_sku_name         = "AZFW_VNet"
+r3_fw_sku_tier         = "Standard"
+r3_fw_zone_ids         = []
+r3_compliance_framework    = "not_assessed"
+r3_network_segmentation    = "internal"
+
+# Stack r4: Storage Accounts
+# — stack r4 (governance tags)
+r4_application          = "sample-app"
+r4_environment          = "dev"
+r4_owner                = "platform-team@contoso.com"
+r4_cost_center          = "CC-0000"
+r4_business_unit        = "engineering"
+r4_data_classification  = "internal"
+r4_criticality          = "medium"
+r4_resource_group_name   = "rg-workload"
+r4_storage_account_name  = "stworkloaddev001"
+r4_account_tier          = "Standard"
+r4_account_replication_type = "ZRS"
+r4_account_kind          = "StorageV2"
+r4_access_tier           = "Hot"
+r4_min_tls_version       = "TLS1_2"
+r4_https_traffic_only    = true
+r4_allow_nested_items_to_be_public = false
+r4_public_network_access_enabled   = true
+# --- Private Endpoint ---
+r4_pe_enabled     = false
+r4_pe_subnet_id   = ""
+r4_pe_subresource = "blob"
+r4_pe_dns_zone_id = ""
+r4_compliance_framework    = "not_assessed"
+r4_network_segmentation    = "internal"
+
+# Stack r5: Resource group
+# — stack r5 (governance tags)
+r5_application          = "sample-app"
+r5_environment          = "dev"
+r5_owner                = "platform-team@contoso.com"
+r5_cost_center          = "CC-0000"
+r5_business_unit        = "engineering"
+r5_data_classification  = "internal"
+r5_criticality          = "medium"
+r5_resource_group_name = "rg-us"
+r5_location            = "eastus"
+r5_compliance_framework    = "not_assessed"
+r5_network_segmentation    = "internal"
+
+# Stack r6: Azure Kubernetes Service (AKS)
+# — stack r6 (governance tags)
+r6_application          = "sample-app"
+r6_environment          = "dev"
+r6_owner                = "platform-team@contoso.com"
+r6_cost_center          = "CC-0000"
+r6_business_unit        = "engineering"
+r6_data_classification  = "internal"
+r6_criticality          = "medium"
+r6_resource_group_name = "rg-workload"
+r6_aks_cluster_name    = "aks-workload-dev"
+r6_aks_dns_prefix      = "aksdev"
+r6_aks_node_count      = 2
+r6_aks_vm_size         = "Standard_DS2_v2"
+r6_compliance_framework    = "not_assessed"
+r6_network_segmentation    = "internal"
+
+# Stack r7: Virtual Machines
+# — stack r7 (governance tags)
+r7_application          = "sample-app"
+r7_environment          = "dev"
+r7_owner                = "platform-team@contoso.com"
+r7_cost_center          = "CC-0000"
+r7_business_unit        = "engineering"
+r7_data_classification  = "internal"
+r7_criticality          = "medium"
+r7_resource_group_name  = "rg-app-workload"
+r7_location             = "eastus"
+r7_vm_name              = "vm-workload-01"
+r7_vm_size              = "Standard_B2s"
+r7_admin_username       = "azureadmin"
+r7_ssh_public_key       = "null"
+r7_key_vault_name                 = "<< existing Key Vault name >>"
+r7_key_vault_resource_group_name  = "<< Key Vault's resource group >>"
+r7_compliance_framework = "not_assessed"
+r7_network_segmentation = "internal"

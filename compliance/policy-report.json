@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-07-24T16:58:09.042Z",
+  "profile": "production",
+  "result": "passed_with_advisories",
+  "findings": [
+    {
+      "resourceId": "azurerm_storage_account",
+      "control": "NET-001",
+      "severity": "warning",
+      "message": "Public network exposure is outside this profile's secure baseline.",
+      "remediation": "Disable public access and configure a private endpoint, or obtain a time-bound exception."
+    },
+    {
+      "resourceId": "azurerm_virtual_machine_modern",
+      "control": "RES-001",
+      "severity": "warning",
+      "message": "Production workload has no explicit availability configuration.",
+      "remediation": "Use availability zones, an availability set, or document the accepted risk."
+    }
+  ]
+}

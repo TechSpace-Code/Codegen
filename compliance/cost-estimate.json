@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-07-24T16:58:09.042Z",
+  "estimates": [
+    {
+      "resourceId": "azurerm_virtual_network",
+      "currency": "USD",
+      "monthlyLow": 4,
+      "monthlyHigh": 7,
+      "methodology": "Indicative catalog heuristic; validate with Azure Pricing Calculator or an authenticated pricing adapter.",
+      "requiresApproval": false
+    },
+    {
+      "resourceId": "azurerm_virtual_network_gateway",
+      "currency": "USD",
+      "monthlyLow": 38,
+      "monthlyHigh": 70,
+      "methodology": "Indicative catalog heuristic; validate with Azure Pricing Calculator or an authenticated pricing adapter.",
+      "requiresApproval": false
+    },
+    {
+      "resourceId": "azurerm_lb",
+      "currency": "USD",
+      "monthlyLow": 38,
+      "monthlyHigh": 70,
+      "methodology": "Indicative catalog heuristic; validate with Azure Pricing Calculator or an authenticated pricing adapter.",
+      "requiresApproval": false
+    },
+    {
+      "resourceId": "azurerm_firewall",
+      "currency": "USD",
+      "monthlyLow": 38,
+      "monthlyHigh": 70,
+      "methodology": "Indicative catalog heuristic; validate with Azure Pricing Calculator or an authenticated pricing adapter.",
+      "requiresApproval": false
+    },
+    {
+      "resourceId": "azurerm_storage_account",
+      "currency": "USD",
+      "monthlyLow": 19,
+      "monthlyHigh": 35,
+      "methodology": "Indicative catalog heuristic; validate with Azure Pricing Calculator or an authenticated pricing adapter.",
+      "requiresApproval": false
+    },
+    {
+      "resourceId": "azurerm_resource_group",
+      "currency": "USD",
+      "monthlyLow": 0,
+      "monthlyHigh": 0,
+      "methodology": "Indicative catalog heuristic; validate with Azure Pricing Calculator or an authenticated pricing adapter.",
+      "requiresApproval": false
+    },
+    {
+      "resourceId": "azurerm_kubernetes_cluster",
+      "currency": "USD",
+      "monthlyLow": 165,
+      "monthlyHigh": 308,
+      "methodology": "Indicative catalog heuristic; validate with Azure Pricing Calculator or an authenticated pricing adapter.",
+      "requiresApproval": false
+    },
+    {
+      "resourceId": "azurerm_virtual_machine_modern",
+      "currency": "USD",
+      "monthlyLow": 71,
+      "monthlyHigh": 133,
+      "methodology": "Indicative catalog heuristic; validate with Azure Pricing Calculator or an authenticated pricing adapter.",
+      "requiresApproval": false
+    }
+  ]
+}
